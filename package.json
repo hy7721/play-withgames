@@ -1,0 +1,25 @@
+{
+  "name": "play-withgames.git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass": "node-sass",
+    "sass": "node-sass -wr styles/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hy7721/play-withgames.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hy7721/play-withgames/issues"
+  },
+  "homepage": "https://github.com/hy7721/play-withgames#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
