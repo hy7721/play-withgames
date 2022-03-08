@@ -1,0 +1,77 @@
+// mobile first
+
+// mobile (<768px)
+// fixture              sm
+// # of columns         4
+// margin               20px
+// container-size       100% - (20px * 2)
+
+// tablet (>=768px)
+// fixture              md
+// # of columns         12
+// margin               20px
+// container-size       100% - (20px * 2)
+// max-container-size   960px
+
+// desktop (>=1400px)
+// fixture              lg
+// # of columns         12
+// margin               auto
+// container-size       100%
+// max-container-size   2560px
+
+$gutter: 20px;
+
+$sm-columns: 4;
+$sm-margin: 20px;
+
+$md-columns: 12;
+$md-margin: 20px;
+$md-max-container: 960px - $md-margin * 2;
+
+$lg-columns: 12;
+$lg-unit: 210px;
+$lg-max-container: $lg-unit * $lg-columns;
+
+.container {
+  width: 100%;
+  padding: 0 $sm-margin;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-wrap: row;
+  }
+}
+
+[class^='col-'] {
+  padding: 0 $gutter / 2;
+}
+
+@for $i from 1 through $sm-columns {
+  .col-sm-#{$i} {
+    width: percentage($i / $sm-columns);
+  }
+}
+
+@include responsive(T) {
+  max-width: $md-max-container;
+  padding: 0 $md-margin;
+}
+
+@for $i from 1 through $md-columns {
+  .col-md-#{i} {
+    width: percentage($i / $md-columns);
+  }
+}
+
+@include responsive(D) {
+  max-width: $lg-max-container;
+  padding: 0;
+}
+
+@for $i from 1 through $lg-columns {
+  .col-lg-#{i} {
+    width: $lg-unit * $i;
+  }
+}
