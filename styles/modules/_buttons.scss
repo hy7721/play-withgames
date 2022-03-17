@@ -1,0 +1,17 @@
+.wrap-btn {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-more {
+  max-width: 237px;
+  padding: 8px 15px;
+  margin-top: 22px;
+  color: $tertiary;
+  border: 1px solid $border;
+}
+
+.btn-top {
+  background-color: $yellow;
+}

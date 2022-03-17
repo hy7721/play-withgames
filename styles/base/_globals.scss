@@ -1,3 +1,10 @@
+#playwithGames {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -10,14 +17,14 @@
   border: 0 !important;
 }
 
-// mobile O / tablet X / desktop X
+// Mobile O / Tablet X / Desktop X
 .sm-only {
   @media screen and (min-width: $md-breakpoint) {
     display: none !important;
   }
 }
 
-// mobile X / tablet O / desktop X
+// Mobile X / Tablet O / Desktop X
 .md-only {
   @media screen and (max-width: $md-breakpoint - 1) {
     display: none !important;
@@ -28,28 +35,28 @@
   }
 }
 
-// mobile X / tablet X / desktop O
+// Mobile X / Tablet X / Desktop O
 .lg-only {
-  @media screen and (min-width: $lg-breakpoint - 1) {
+  @media screen and (max-width: $lg-breakpoint - 1) {
     display: none !important;
   }
 }
 
-// mobile X / tablet O / desktop O
+// Mobile X / Tablet O / Desktop O
 .sm-hidden {
   @media screen and (max-width: $md-breakpoint - 1) {
     display: none !important;
   }
 }
 
-// mobile O / tablet X / desktop O
+// Mobile O / Tablet X / Desktop O
 .md-hidden {
-  @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint - 1) {
+  @media screen and (min-width: $md-breakpoint) and(max-width: $lg-breakpoint - 1) {
     display: none !important;
   }
 }
 
-// mobile O / tablet O / desktop X
+// Mobile O / Tablet O / Desktop X
 .lg-hidden {
   @media screen and (min-width: $lg-breakpoint) {
     display: none !important;

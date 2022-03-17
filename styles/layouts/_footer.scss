@@ -1,0 +1,7 @@
+.wrap-footer {
+  @include column-flexbox();
+}
+
+.copyright {
+  @include text-style-10;
+}
