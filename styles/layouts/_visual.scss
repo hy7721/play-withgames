@@ -2,17 +2,34 @@
   height: 100vh;
   max-height: 650px;
   overflow: hidden;
-  background: url('/assets/images/img-visual.jpg') left top;
+  background: url('/assets/images/img-visual.jpg');
+  background-position: left top;
+  background-repeat: no-repeat;
   background-size: cover;
+
+  @include responsive(D) {
+    width: 100%;
+    height: 100vh;
+    max-height: 1460px;
+    background-position: center center;
+  }
 
   .inner-p {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: auto;
     max-height: 650px;
     padding: 20px;
     margin: 0 auto;
     overflow: hidden;
+
+    @include responsive(D) {
+      height: 100vh;
+      max-width: 2560px;
+      max-height: 1460px;
+      min-width: 1300px;
+      padding: 0;
+    }
   }
 }
 
@@ -23,6 +40,16 @@
   height: 100%;
   max-height: 378px;
   text-align: left;
+
+  @media screen and (max-width: 360px) {
+    bottom: 40px;
+  }
+
+  @include responsive(D) {
+    max-width: 2560px;
+    min-width: 1300px;
+    padding-left: 95px;
+  }
 }
 
 .tit-main {
@@ -30,17 +57,29 @@
   display: block;
   width: calc(100% - 45px);
 
+  @include responsive(D) {
+    @include text-style-70();
+    display: inline;
+  }
+
   &.is-narrow {
-    font-family: $font-en-narrow;
-    font-weight: 500;
+    @include font-en-narrow;
     letter-spacing: $letter-spacing-5;
+
+    @include responsive(D) {
+      letter-spacing: $letter-spacing-11;
+    }
   }
 
   &.is-bold {
+    @include font-en-bold;
     margin: -38px 0 0 4px;
-    font-family: $font-en-bold;
     letter-spacing: $letter-spacing-16;
     color: $yellow;
+
+    @include responsive(D) {
+      letter-spacing: $letter-spacing-19;
+    }
   }
 }
 
@@ -49,26 +88,46 @@
   width: 30px;
   height: 100px;
   margin-top: 16px;
+
+  @include responsive(D) {
+    width: 65px;
+    height: 150px;
+    margin-top: 22px;
+  }
 }
 
 .btn-scroll {
   display: block;
   padding: 14px 16px 0 0;
+
+  @include responsive(D) {
+    padding: 30px 44px 0 0;
+  }
 }
 
 .txt-scroll {
   @include text-style-10;
   display: block;
-  font-family: $font-en-bold;
-  font-weight: 700;
   color: $white;
   transform: rotate(270deg);
+
+  @include responsive(D) {
+    font-size: 14px;
+    line-height: 0;
+  }
 }
 
 .txt-main {
-  @include text-style-10();
+  @include text-style-10;
   display: block;
   width: 100%;
   margin: 6px 0 0 4px;
   color: $white;
+
+  @include responsive(D) {
+    margin: 22px 0 0 6px;
+    font-size: 17px;
+    line-height: 1.3em;
+    letter-spacing: $letter-spacing-4;
+  }
 }

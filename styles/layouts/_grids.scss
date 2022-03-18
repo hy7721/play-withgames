@@ -51,6 +51,7 @@ $lg-max-container: 100%;
 
   @include responsive(T) {
     max-width: $md-max-container;
+    padding: 0 $md-margin;
     margin: 0 auto;
   }
 

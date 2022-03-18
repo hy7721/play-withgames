@@ -1,3 +1,9 @@
+@mixin text-style-70() {
+  font-size: $font-size-70;
+  line-height: $line-height-10;
+  color: $white;
+}
+
 @mixin text-style-42() {
   font-size: $font-size-42;
   line-height: $line-height-10;
@@ -11,31 +17,11 @@
   color: $black;
 }
 
-@mixin text-style-17() {
-  font-family: $font-main;
-  font-size: $font-size-17;
-}
-
-@mixin text-style-16() {
-  font-size: $font-size-16;
-  color: $tertiary;
-}
-
-@mixin text-style-15() {
-  font-family: $font-main;
-  font-size: $font-size-15;
-  color: $white;
-}
-
 @mixin text-style-14() {
   font-family: $font-main;
   font-size: $font-size-14;
   font-weight: 400;
   color: $primary;
-}
-
-@mixin text-style-12() {
-  font-size: $font-size-12;
 }
 
 @mixin text-style-11() {
@@ -45,4 +31,14 @@
 @mixin text-style-10() {
   font-size: $font-size-10;
   line-height: 1.4em;
+}
+
+@mixin font-en-narrow() {
+  font-family: $font-en-narrow;
+  font-weight: 500;
+}
+
+@mixin font-en-bold() {
+  font-family: $font-en-bold;
+  font-weight: 700;
 }

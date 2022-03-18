@@ -1,5 +1,5 @@
 .play-header {
-  @include flexbox();
+  @include flexbox(stretch, center);
   position: absolute;
   top: 0;
   left: 0;
@@ -8,20 +8,27 @@
   overflow: hidden;
 
   @include responsive(D) {
+    @include pos-center-x;
+    width: 100%;
     height: 154px;
-    padding: 28px 0 0 85px;
-    background-color: orange;
+    max-width: 2560px;
+    min-width: 1300px;
+    padding: 48px 0 0 95px;
   }
 }
 
+h1,
 .link-logo,
 .img-logo {
   display: block;
-  width: auto;
-  height: 23px;
+  width: 86px;
+  height: auto;
   margin: 6px 0 0 2px;
 
   @include responsive(D) {
-    height: 51px;
+    width: 201px;
+    height: auto;
+    margin: 0;
+    vertical-align: middle;
   }
 }
