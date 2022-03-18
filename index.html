@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/lib/css/aos.css" />
-    <link rel="stylesheet" href="/assets/lib/css/slick.css" />
+    <link rel="stylesheet" href="lib/css/aos.css">
+    <link rel="stylesheet" href="lib/css/slick.css">
     <link rel="stylesheet" href="./style.css" />
 
-    <script src="/assets/lib/js/jquery-3.6.0.min.js"></script>
-    <script src="/assets/lib/js/aos.js"></script>
-    <script src="/assets/lib/js/slick.min.js"></script>
+
+    <script src="lib/js/jquery-3.6.0.min.js"></script>
+    <script src="lib/js/aos.js"></script>
+    <script src="lib/js/slick.min.js"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body>
     <noscript>
@@ -61,7 +63,14 @@
                 자체 IP를 활용한 다양한 도전을 통해 더 큰 세상으로 나아가려
                 합니다.</strong
               >
+              <div class="wrap-scroll">
+                <a href="#sectionNotice" class="btn-scroll">
+                  <p class="txt-scroll">Scroll</p>
+                  <span class="ico-comm ico-scroll"></span>
+                </a>
+              </div>
             </div>
+
           </div>
         </section>
 
@@ -83,7 +92,7 @@
                   </li>
                   <li>
                     <a href="/" class="link-notice">
-                      <p class="date">2022.02.18</p>
+                      <p class="date">2022.01.28</p>
                       <strong class="title"
                         >[보도자료]또 다른 콘솔 명작 [God of War] 스팀 PC 카페에
                         합류했다</strong
@@ -92,16 +101,24 @@
                   </li>
                   <li>
                     <a href="/" class="link-notice">
-                      <p class="date">2022.02.18</p>
+                      <p class="date">2022.01.14</p>
                       <strong class="title"
                         >[보도자료]호라이즌 제로 던 등 콘솔게임 인기작 3종, 스팀
                         PC 카페 라인업 참여</strong
                       >
                     </a>
                   </li>
+                  <li>
+                    <a href="/" class="link-notice">
+                      <p class="date">2021.12.09</p>
+                      <strong class="title"
+                        >[보도자료]씰온라인, '현자의 탑 어나더', '스킬 어빌리티 젬' 등 다양한 즐길 거리 선보여</strong
+                      >
+                    </a>
+                  </li>
                 </ul>
-                <div class="wrap-btn">
-                  <button type="button" class="btn-more sm-only">
+                <div class="wrap-btn lg-hidden">
+                  <button type="button" class="btn-more">
                     더보기
                     <span class="ico-comm ico-plus"></span>
                   </button>
@@ -125,7 +142,11 @@
       </footer>
 
       <aside class="play-aside">
-        <button type="button" class="btn-top">top button</button>
+        <button type="button" class="btn-top">
+          <span class="ico-comm ico-arr-t"></span>
+          <span class="txt-top">TOP</span>
+          <span class="visually-hidden">페이지 맨 위로 이동</span>
+        </button>
       </aside>
     </div>
   </body>

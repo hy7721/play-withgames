@@ -13,5 +13,21 @@
 }
 
 .btn-top {
+  @include text-style-10;
+  position: fixed;
+  display: block;
+  width: 35px;
+  height: 35px;
+  font-family: $font-en-normal;
+  text-align: center;
   background-color: $yellow;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.showButton {
+  opacity: 1 !important;
+  visibility: visible !important;
 }

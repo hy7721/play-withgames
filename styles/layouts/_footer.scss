@@ -1,7 +1,10 @@
 .wrap-footer {
   @include column-flexbox();
+  width: 100%;
+  height: 150px;
 }
 
 .copyright {
   @include text-style-10;
+  color: $secondary;
 }

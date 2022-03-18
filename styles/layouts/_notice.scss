@@ -14,24 +14,35 @@
 }
 
 .tit-notice {
-  @include text-style-30();
+  @include text-style-41();
   display: block;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 68px;
   text-align: center;
 }
 
 .list-notice {
   width: 100%;
-  margin-top: 35px;
+  margin-top: 18px;
   text-overflow: ellipsis;
   border-top: 2px solid $black;
 
   li {
-    padding: 16px 0 15px;
+    padding: 11px 0 10px 7px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     border-bottom: 1px solid $border;
+
+    .date {
+      @include text-style-11;
+      font-family: $font-en-narrow;
+    }
+
+    .title {
+      @include text-style-14;
+      letter-spacing: $letter-spacing-1;
+      color: $primary;
+    }
   }
 }
