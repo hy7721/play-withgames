@@ -1,31 +1,67 @@
 $(document).ready(function () {
-  // btnTop(IE not supports. Supports all major browsers)
-  window.scrollY
-  document.scrollingElement.scrollTop
-  document.documentElement.scrollTop
-  document.querySelector('html').scrollTop
+  // accordion
+  $('#accordion').accordion()
 
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset <= 0) {
-      jQuery('.btn-top').removeClass('showButton')
+  // back to top button
+  let scrollTop = $('.btn-top')
+
+  $(window).scroll(function () {
+    let topPosition = $(this).scrollTop()
+
+    if (topPosition > 100) {
+      $(scrollTop).css('opacity', '1')
     } else {
-      jQuery('.btn-top').addClass('showButton')
+      $(scrollTop).css('opacity', '0')
     }
   })
-  jQuery(window).on('touchmove', function (e) {
-    if (window.pageYOffset <= 0) {
-      jQuery('.btn-top').removeClass('showButton')
-    } else {
-      jQuery('.btn-top').addClass('showButton')
-    }
-  })
-  jQuery('.btn-top').on('click touch', function () {
-    jQuery('html,body').animate({ scrollTop: 0 }, 300)
-    jQuery('.btn-top').removeClass('showButton')
+
+  $(scrollTop).click(function () {
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    )
+    return false
   })
 
-  // 모바일 100vh 하단 가려지는 현상 해결
+  // scroll animation
+  $('.btn-scroll').on('click touch', function (e) {
+    e.preventDefault()
+
+    var hash = this.hash
+
+    $('html, body').animate(
+      {
+        scrollTop: $(hash).offset().top,
+      },
+      600,
+      function () {
+        window.location.hash = hash
+      }
+    )
+  })
+
+  // layer popup
+  function layerPopupOpen($t) {
+    $('.play-popup' + '.' + $t)
+      .stop(true, true)
+      .fadeIn(300)
+  }
+  function layerPopupClose() {
+    $('.play-popup').each(function () {
+      if ($(this).css('display') != 'none')
+        $(this).stop(true, true).fadeOut(300)
+    })
+  }
+
+  $(document).on('click', '.btn-close', function () {
+    if (!$(this).parent().css('display') != 'none') {
+      layerPopupClose()
+    }
+  })
+
+  // MO height=100vh 하단 가려지는 현상 해결
   let vh = window.innerHeight * 0.01
   document.documentElement.style.setProperty('--vh', `${vh}px`)
-  // document.querySelector('.wrap_result', '.wrap_receipt', '.wrap_error').style.height = window.innerHeight + "px";
 })

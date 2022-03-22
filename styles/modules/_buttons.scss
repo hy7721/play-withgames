@@ -5,11 +5,16 @@
 }
 
 .btn-more {
-  max-width: 237px;
-  padding: 8px 15px;
-  margin-top: 22px;
+  @include text-style-12;
+  max-width: 230px;
+  padding: 6px 10px;
+  margin-top: 20px;
   color: $tertiary;
   border: 1px solid $border;
+
+  @include responsive(T) {
+    margin-top: 44px;
+  }
 }
 
 .btn-top {
@@ -30,4 +35,89 @@
 .showButton {
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+.btn-prev,
+.btn-next {
+  width: 10px;
+  height: 19px;
+  margin-bottom: 4px;
+}
+
+.wrap-close {
+  @include pos-center();
+  top: -15px;
+  right: 0;
+  z-index: 7721;
+  width: 80vw;
+  height: 50px;
+
+  @include responsive(T) {
+    top: -25px;
+    width: 660px;
+    height: 55px;
+  }
+
+  @include responsive(D) {
+    top: -25px;
+    width: 660px;
+    height: 55px;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+
+  @include responsive(T) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include responsive(D) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.btn-landing {
+  display: inline-block;
+  height: 30px;
+  min-width: 100px;
+  padding: 6px 10px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  font-size: $font-size-13;
+  font-weight: 700;
+  line-height: $line-height-10;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $white;
+  border: 1px solid $border;
+  color: $primary;
+
+  @include responsive(T) {
+    height: 45px;
+    padding: 12px 33px;
+    margin-top: 50px;
+    margin-bottom: 55px;
+    font-size: $font-size-16;
+  }
+
+  @include responsive(D) {
+    height: 45px;
+    padding: 12px 33px;
+    margin-top: 50px;
+    margin-bottom: 55px;
+    font-size: $font-size-16;
+  }
+
+  &:hover {
+    color: $blue;
+    border-color: $blue;
+    transition: all 0.2s ease-in-out;
+  }
 }

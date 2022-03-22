@@ -3,17 +3,23 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 45px;
   overflow: hidden;
+
+  @include responsive(T) {
+    height: 90px;
+    padding: 30px 0 0 50px;
+  }
 
   @include responsive(D) {
     @include pos-center-x;
     width: 100%;
     height: 154px;
     max-width: 2560px;
-    min-width: 1300px;
-    padding: 48px 0 0 95px;
+    min-width: 1280px;
+    padding: 48px 95px 0 95px;
   }
 }
 
@@ -23,11 +29,15 @@ h1,
   display: block;
   width: 86px;
   height: auto;
-  margin: 6px 0 0 2px;
+  margin: 3px 0 0 1px;
+
+  @include responsive(T) {
+    width: 182px;
+    margin: 0;
+  }
 
   @include responsive(D) {
     width: 201px;
-    height: auto;
     margin: 0;
     vertical-align: middle;
   }

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="lib/css/aos.css">
-    <link rel="stylesheet" href="lib/css/slick.css">
+    <title>playwith GAMES</title>
+    <link rel="stylesheet" href="lib/css/jquery-ui.css" />
+    <link rel="stylesheet" href="lib/css/aos.css" />
+    <link rel="stylesheet" href="lib/css/slick.css" />
     <link rel="stylesheet" href="./style.css" />
 
-
     <script src="lib/js/jquery-3.6.0.min.js"></script>
+    <script src="lib/js/jquery-ui.min.js"></script>
     <script src="lib/js/aos.js"></script>
     <script src="lib/js/slick.min.js"></script>
     <script src="/js/main.js"></script>
@@ -31,7 +32,7 @@
             <h1>
               <a href="/" class="link-logo">
                 <img
-                  src="/assets/images/img-playwith-games.png"
+                  src="/assets/images/img-games-01.png"
                   class="img-logo"
                   alt="Playwith Games 로고"
                 />
@@ -44,16 +45,25 @@
       <main class="play-main">
         <h2 class="visually-hidden">메인 영역</h2>
         <section class="wrap-visual col-lg-12" id="sectionVisual">
+          <div class="bg-visual">
+            <!-- <img
+              src="./assets/images/img-visual.jpg"
+              class="img-parallax lg-only"
+              alt=""
+            /> -->
+          </div>
           <h3 class="visually-hidden">비주얼 영역</h3>
           <div class="inner-p">
             <div class="wrap-tit-main">
               <h4 class="tit-main">
                 <span class="tit-main is-narrow">
-                  EXPERIENCE THE WORLD
-                  <br class="sm-hidden">
+                  EXPERIENCE
+                  <br class="sm-only" />
+                  THE WORLD
+                  <br />
                   WITH
                 </span>
-                <br class="sm-only"/>
+                <br class="sm-only" />
                 <span class="tit-main is-bold"> PLAYWITH GAMES </span>
               </h4>
               <strong class="txt-main">
@@ -72,7 +82,6 @@
                 </a>
               </div>
             </div>
-
           </div>
         </section>
 
@@ -88,8 +97,9 @@
                       <p class="date">2022.02.18</p>
                       <strong class="title"
                         >[보도자료]로한 온라인, 투신의 전당 보상 업그레이드 및
-                        골든 티켓 이벤트</strong
-                      >
+                        골든 티켓 이벤트
+                        <span class="ico-new sm-hidden">N</span>
+                      </strong>
                     </a>
                   </li>
                   <li>
@@ -114,11 +124,73 @@
                     <a href="/" class="link-notice">
                       <p class="date">2021.12.09</p>
                       <strong class="title"
-                        >[보도자료]씰온라인, '현자의 탑 어나더', '스킬 어빌리티 젬' 등 다양한 즐길 거리 선보여</strong
+                        >[보도자료]씰온라인, '현자의 탑 어나더', '스킬 어빌리티
+                        젬' 등 다양한 즐길 거리 선보여</strong
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-notice">
+                      <p class="date">2021.11.25</p>
+                      <strong class="title"
+                        >[보도자료]플레이위드, 플레이위드 게임즈가 개발 중인
+                        [로한 M2] 글로벌 퍼블리싱 계약</strong
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-notice">
+                      <p class="date">2021.11.09</p>
+                      <strong class="title"
+                        >[보도자료]플레이위드, [로한M] 각성시스템, 신규 필드,
+                        장신구 등 대규모 업데이트 진행</strong
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-notice">
+                      <p class="date">2021.11.01</p>
+                      <strong class="title"
+                        >[보도자료]플레이위드 또 다른 씰IP 신작 [씰 유니버스]
+                        글로벌 퍼블리싱 계약</strong
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-notice">
+                      <p class="date">2021.10.15</p>
+                      <strong class="title"
+                        >[보도자료]플레이위드, 지스타 2021에서 모바일 신작 [씰M]
+                        동영상 등 이모저모 첫 공개</strong
                       >
                     </a>
                   </li>
                 </ul>
+
+                <div class="wrap-pagination lg-only">
+                  <button type="button" class="btn-prev">
+                    <span class="ico-comm ico-prev"></span>
+                    <span class="visually-hidden">이전 페이지로 이동</span>
+                  </button>
+                  <ol class="list-pagination">
+                    <li>
+                      <a href="/" class="link-pg is-active">1</a>
+                    </li>
+                    <li>
+                      <a href="/" class="link-pg">2</a>
+                    </li>
+                    <li>
+                      <a href="/" class="link-pg">3</a>
+                    </li>
+                    <li>
+                      <a href="/" class="link-pg">4</a>
+                    </li>
+                  </ol>
+                  <button type="button" class="btn-next">
+                    <span class="ico-comm ico-next"></span>
+                    <span class="visually-hidden">다음 페이지로 이동</span>
+                  </button>
+                </div>
                 <div class="wrap-btn lg-hidden">
                   <button type="button" class="btn-more">
                     더보기
@@ -137,8 +209,9 @@
           <div class="row">
             <div class="wrap-footer">
               <p class="copyright">
-                &copy; PLAYWITH GAMES Inc. All Rights Reserved.</div>
+                &copy; PLAYWITH GAMES Inc. All Rights Reserved.
               </p>
+            </div>
           </div>
         </div>
       </footer>
@@ -150,6 +223,23 @@
           <span class="visually-hidden">페이지 맨 위로 이동</span>
         </button>
       </aside>
+
+      <div class="play-popup" style="display: block">
+        <div class="wrap-popup">
+          <div class="wrap-close">
+            <button type="button" class="btn-close" aria-label="close button">
+              <span class="ico-close"></span>
+              <span class="visually-hidden">팝업창 닫기</span>
+            </button>
+          </div>
+          <div class="wrap-txt">
+            <strong class="tit-popup">제목입력</strong>
+            <p class="txt-popup">%%를 입력해 주세요.</p>
+            <a href="/" class="btn-landing" target="_self"> 자세히 보기 </a>
+          </div>
+        </div>
+        <div class="wrap-dimmed"></div>
+      </div>
     </div>
   </body>
 </html>

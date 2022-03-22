@@ -5,40 +5,85 @@
   line-height: 0;
   text-indent: -9999px;
   vertical-align: top;
-  background-image: url('assets/images/ico-comm.png');
-  background-repeat: no-repeat;
-  background-size: 150px 50px;
 }
 
 .ico-scroll {
   width: 4px;
-  height: 22px;
-  margin-top: 8px;
+  height: 25px;
+  margin-top: 28px;
   margin-left: 4px;
-  background-position: 0 0;
+  background: url('/assets/images/mo/ico-scroll.png') center center no-repeat;
+
+  @include responsive(T) {
+    width: 5px;
+    height: 31px;
+    margin-top: 32px;
+    margin-left: 11px;
+    background: url('/assets/images/tb/ico-scroll.png') center center no-repeat;
+  }
 
   @include responsive(D) {
     width: 7px;
     height: 43px;
-    margin-top: 35px;
+    margin-top: 60px;
     margin-left: 6px;
-    background: url('/assets/images/ico-scroll.png');
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    background: url('/assets/images/ico-scroll.png') center center no-repeat;
   }
 }
 
 .ico-plus {
   width: 13px;
   height: 13px;
-  margin-top: 3px;
+  margin-top: 1px;
   margin-left: 46px;
-  background-position: -110px 0;
+  background: url('/assets/images/ico-plus.png') center center no-repeat;
 }
 
 .ico-arr-t {
   @include pos-center-x;
+  top: 8px;
   width: 10px;
-  height: 5px;
-  background-position: -125px 0;
+  height: 6px;
+  background: url('/assets/images/ico-top.png') center center no-repeat;
+}
+
+.ico-prev {
+  width: 10px;
+  height: 19px;
+  background: url('/assets/images/ico-prev.png') center center no-repeat;
+}
+
+.ico-next {
+  width: 10px;
+  height: 19px;
+  background: url('/assets/images/ico-next.png') center center no-repeat;
+}
+
+.ico-new {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  padding-top: 2px;
+  padding-left: 4px;
+  margin-top: -2px;
+  margin-left: 10px;
+  color: $white;
+  background-color: $light-blue;
+}
+
+.ico-close {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url('/assets/images/ico-close.png') center center no-repeat;
+
+  @include responsive(T) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include responsive(D) {
+    width: 30px;
+    height: 30px;
+  }
 }

@@ -1,1 +1,32 @@
+.wrap-pagination {
+  @include flexbox;
+  position: relative;
+  padding: 55px 0 70px;
+  margin: 0 auto;
 
+  .list-pagination {
+    @include flexbox;
+    position: relative;
+    padding: 0 50px;
+
+    li + li {
+      margin-left: 20px;
+    }
+
+    a {
+      @include text-style-16;
+      position: relative;
+      display: block;
+      height: 22px;
+      padding: 0 6px;
+      font-family: $font-en-narrow;
+      color: $tertiary;
+
+      &:hover,
+      &.is-active {
+        color: $blue;
+        border-bottom: 2px solid $blue;
+      }
+    }
+  }
+}

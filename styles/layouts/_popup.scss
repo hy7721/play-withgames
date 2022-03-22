@@ -1,0 +1,88 @@
+.play-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-popup {
+  @include pos-center;
+  z-index: 7721;
+  width: 80vw;
+  max-height: 80vh;
+  margin-top: 50px;
+  background-color: $white;
+  border: 2px solid $white;
+
+  @include responsive(T) {
+    width: 660px;
+    max-height: 566px;
+  }
+
+  @include responsive(D) {
+    width: 660px;
+    max-height: 566px;
+  }
+}
+
+.wrap-dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 64;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: 0.8;
+}
+
+.wrap-txt {
+  @include column-flexbox;
+}
+
+.tit-popup {
+  @include flexbox;
+  width: 100%;
+  height: 45px;
+  font-family: $font-main;
+  font-size: $font-size-17;
+  font-weight: 700;
+  color: $grey;
+  border-bottom: 1px solid $border;
+
+  @include responsive(T) {
+    font-size: $font-size-22;
+    height: 95px;
+  }
+
+  @include responsive(D) {
+    font-size: $font-size-22;
+    height: 95px;
+  }
+}
+
+.txt-popup {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 30px 30px 25px 30px;
+  font-size: $font-size-13;
+  font-weight: 400;
+  color: $primary;
+  text-align: center;
+  word-break: break-all;
+
+  @include responsive(T) {
+    padding: 60px 60px 50px 60px;
+    font-size: $font-size-16;
+  }
+
+  @include responsive(D) {
+    padding: 60px 60px 50px 60px;
+    font-size: $font-size-16;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>playwith GAMES</title>
+    <link rel="stylesheet" href="lib/css/jquery-ui.css" />
+    <link rel="stylesheet" href="lib/css/aos.css" />
+    <link rel="stylesheet" href="lib/css/slick.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="lib/js/jquery-3.6.0.min.js"></script>
+    <script src="lib/js/jquery-ui.min.js"></script>
+    <script src="lib/js/aos.js"></script>
+    <script src="lib/js/slick.min.js"></script>
+    <script src="/js/main.js"></script>
+    <style>
+      .que {
+        position: relative;
+        padding: 17px 0;
+        cursor: pointer;
+        font-size: 14px;
+        border-bottom: 1px solid #dddddd;
+      }
+
+
+
+      .anw {
+        display: none;
+        overflow: hidden;
+        font-size: 14px;
+        background-color: #f4f4f2;
+        padding: 27px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrap-notice col-sm-4" id="sectionNotice">
+      <div class="container">
+        <div class="row">
+          <h3 class="visually-hidden">게시판 영역</h3>
+          <div class="inner-p">
+            <h4 class="tit-notice col-sm-4">NOTICE</h4>
+            <ul class="list-notice col-sm-4">
+              <li>
+                <div class="que">
+                  <p class="date">2022.02.18</p>
+                  <strong class="title"
+                    >[보도자료]로한 온라인, 투신의 전당 보상 업그레이드 및
+                    골든 티켓 이벤트
+                    <span class="ico-new sm-hidden">N</span>
+                  </strong>
+                </div>
+                <div class="anw">
+                  <span>This is first answer.</span>
+                </div>
+              </li>
+            </ul>
+
+              <div class="que">
+                <span>This is first question.</span>
+              </div>
+              <div class="anw">
+                <span>This is first answer.</span>
+              </div>
+              <div class="que">
+                <span>This is second question.</span>
+              </div>
+              <div class="anw">
+                <span>This is second answer.</span>
+              </div>
+              <div class="que">
+                <span>This is third question.</span>
+              </div>
+              <div class="anw">
+                <span>This is third answer.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    $('.que').click(function () {
+      $(this).next('.anw').stop().slideToggle(300)
+      $(this).toggleClass('on').siblings().removeClass('on')
+      $(this).next('.anw').siblings('.anw').slideUp(300) // 1개씩 펼치기
+    })
+  </script>
+</html>

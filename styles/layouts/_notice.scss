@@ -11,38 +11,90 @@
     margin: 0 auto;
     overflow: hidden;
   }
+
+  @include responsive(T) {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1360px) {
+    .inner-p {
+      padding: 0 20px;
+    }
+  }
 }
 
 .tit-notice {
-  @include text-style-41();
+  @include text-style-40();
   display: block;
   width: 100%;
-  margin-top: 68px;
+  margin-top: 79px;
   text-align: center;
+
+  @include responsive(T) {
+    @include text-style-30;
+    margin-top: 92px;
+  }
+
+  @include responsive(D) {
+    @include text-style-55;
+    margin-top: 194px;
+  }
 }
 
 .list-notice {
   width: 100%;
-  margin-top: 18px;
+  margin-top: 28px;
   text-overflow: ellipsis;
-  border-top: 2px solid $black;
+  border-top: 1px solid $black;
+
+  @include responsive(T) {
+    margin-top: 45px;
+  }
+
+  @include responsive(D) {
+    margin-top: 89px;
+    border-top: 2px solid $black;
+  }
 
   li {
-    padding: 11px 0 10px 7px;
+    position: relative;
+    padding: 14px 0 17px 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     border-bottom: 1px solid $border;
 
+    @include responsive(T) {
+      padding: 16px 24px;
+    }
+
+    @include responsive(D) {
+      height: 65px;
+      padding: 25px 40px 20px 33px;
+    }
+
     .date {
-      @include text-style-11;
+      @include text-style-12;
       font-family: $font-en-narrow;
+
+      @include responsive(T) {
+        @include text-style-14;
+        line-height: $line-height-14;
+      }
+
+      @include responsive(D) {
+        float: right;
+        font-size: $font-size-16;
+      }
     }
 
     .title {
-      @include text-style-14;
-      letter-spacing: $letter-spacing-1;
-      color: $primary;
+      @include text-style-13;
+
+      @include responsive(D) {
+        float: left;
+        font-size: $font-size-16;
+      }
     }
   }
 }
