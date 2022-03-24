@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>playwith GAMES</title>
-    <link rel="stylesheet" href="lib/css/jquery-ui.css" />
-    <link rel="stylesheet" href="lib/css/aos.css" />
-    <link rel="stylesheet" href="lib/css/slick.css" />
+    <link rel="stylesheet" href="./lib/css/jquery-ui.css" />
+    <link rel="stylesheet" href="./lib/css/aos.css" />
+    <link rel="stylesheet" href="./lib/css/slick.css" />
     <link rel="stylesheet" href="./style.css" />
 
-    <script src="lib/js/jquery-3.6.0.min.js"></script>
-    <script src="lib/js/jquery-ui.min.js"></script>
-    <script src="lib/js/aos.js"></script>
-    <script src="lib/js/slick.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="./lib/js/jquery-3.6.0.min.js"></script>
+    <script src="./lib/js/jquery-ui.min.js"></script>
+    <script src="./lib/js/aos.js"></script>
+    <script src="./lib/js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
   </head>
   <body>
     <noscript>
@@ -32,7 +32,7 @@
             <h1>
               <a href="/" class="link-logo">
                 <img
-                  src="/assets/images/img-games-01.png"
+                  src="./assets/images/img-games-01.png"
                   class="img-logo"
                   alt="Playwith Games 로고"
                 />
@@ -45,13 +45,7 @@
       <main class="play-main">
         <h2 class="visually-hidden">메인 영역</h2>
         <section class="wrap-visual col-lg-12" id="sectionVisual">
-          <div class="bg-visual">
-            <!-- <img
-              src="./assets/images/img-visual.jpg"
-              class="img-parallax lg-only"
-              alt=""
-            /> -->
-          </div>
+          <div class="bg-visual" data-type="background" data-speed="3"></div>
           <h3 class="visually-hidden">비주얼 영역</h3>
           <div class="inner-p">
             <div class="wrap-tit-main">
@@ -86,6 +80,11 @@
         </section>
 
         <section class="wrap-notice col-sm-4" id="sectionNotice">
+          <div
+            class="bg-notice lg-only"
+            data-type="content"
+            data-speed="2"
+          ></div>
           <div class="container">
             <div class="row">
               <h3 class="visually-hidden">게시판 영역</h3>
@@ -93,14 +92,66 @@
                 <h4 class="tit-notice col-sm-4">NOTICE</h4>
                 <ul class="list-notice col-sm-4">
                   <li>
-                    <a href="/" class="link-notice">
+                    <a class="notice-title">
                       <p class="date">2022.02.18</p>
                       <strong class="title"
-                        >[보도자료]로한 온라인, 투신의 전당 보상 업그레이드 및
-                        골든 티켓 이벤트
+                        >[보도자료]플레이위드, NFT 접목한 [씰 M] 상반기 대만
+                        최초 출시한다
                         <span class="ico-new sm-hidden">N</span>
                       </strong>
                     </a>
+                    <div class="notice-detail">
+                      <strong class="subtitle">
+                        * NFT 적용한 [씰 M] 대만,홍콩,마카오 5월 출시 예정
+                      </strong>
+                      <strong class="subtitle">
+                        * 블록체인 생태계 관련 신규 프로젝트 추후 공식 루트 통해
+                        공개
+                      </strong>
+                      <p class="paragraph">
+                        플레이위드가 올해 NFT를 적용한 신작을 앞세워 글로벌
+                        공략을 시작한다.
+                      </p>
+                      <p class="paragraph">
+                        ㈜플레이위드(대표 김학준)가 신작 모바일 게임 [씰 M]에
+                        NFT(Non Fungible Token, 대체 불가능 토큰)을 접목해 대만,
+                        홍콩, 마카오 지역에 상반기 출시를 시작으로 글로벌 공략에
+                        본격 시동을 건다고 밝혔다. 이로써 플레이위드는 글로벌
+                        게임 시장을 통해 대표적인 블록체인 기술을 접목한 NFT를
+                        활용해 게임 시장에 진출하게 된다.
+                      </p>
+                      <p class="paragraph">
+                        씰 온라인의 정통성을 계승해 선보이게 될 [씰 M]은 원작 씰
+                        온라인의 다양한 콘텐츠를 모바일로 재해석해 플레이위드
+                        게임즈가 개발하고 있다. 이미 사내 테스트를 통해 콘텐츠와
+                        안정성을 검증 받았으며 현재 마무리 작업 중이며, 오는
+                        4월부터 대만 출시를 위한 대규모 마케팅 등 사전 작업에
+                        돌입할 예정이다.
+                      </p>
+                      <p class="paragraph">
+                        특히 대만에서 인기있는 원작 씰 온라인의 대표 캐릭터와
+                        NFT를 더함으로써 또 다른 요소를 더했다. 플레이위드는 [씰
+                        M]의 대만 출시 이 후 국가별 맞춤 콘텐츠와 마케팅 등을
+                        통해 글로벌 출시에 박차를 가할 예정이다.
+                      </p>
+                      <p class="paragraph">
+                        씰 온라인의 또 다른 IP 신작인 [씰 유니버스]는 캐주얼
+                        게임으로 기존의 MMORPG와는 다른 형식으로 구성되어 있다.
+                        [씰 유니버스]는 [씰 M]의 대만 출시가 완료되는 대로 NFT
+                        접목 등 정보를 순차적으로 공개할 예정이다. 플레이위드는
+                        블록체인을 기반으로 연계되는 NFT 관련 사업 등을 주목하고
+                        있다. 그리고 앞으로 출시하는 라인업도 이를 바탕으로 하는
+                        기술을 활용할 예정이며, 블록체인 생태계와 더불어 P2E와
+                        차별화된 새로운 화두를 제시할 방침이다.
+                      </p>
+                      <p class="paragraph">
+                        플레이위드 관계자는 ‘NFT를 접목한 씰 M의 최초 발표로
+                        플레이위드는 블록체인 생태계에 본격적인 사업을 진행하게
+                        되었으며, 보다 자세한 로드맵은 파트너사와 협의를 통해
+                        빠른 시일 내 미디어 간담회 등 공식적인 루트를 통해
+                        공개할 예정이라고 밝혔다.
+                      </p>
+                    </div>
                   </li>
                   <li>
                     <a href="/" class="link-notice">
@@ -224,7 +275,7 @@
         </button>
       </aside>
 
-      <div class="play-popup" style="display: block">
+      <div class="play-popup">
         <div class="wrap-popup">
           <div class="wrap-close">
             <button type="button" class="btn-close" aria-label="close button">
@@ -241,5 +292,6 @@
         <div class="wrap-dimmed"></div>
       </div>
     </div>
+    <script></script>
   </body>
 </html>
