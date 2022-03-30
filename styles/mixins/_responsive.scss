@@ -10,4 +10,10 @@
       @content;
     }
   }
+
+  @if ($screen == 'O') {
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
 }
