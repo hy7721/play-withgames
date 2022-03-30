@@ -5,10 +5,10 @@
 }
 
 .btn-more {
-  @include text-style-12;
   max-width: 230px;
   padding: 6px 10px;
   margin-top: 20px;
+  font-size: $font-size-12;
   color: $tertiary;
   border: 1px solid $border;
 
@@ -18,23 +18,18 @@
 }
 
 .btn-top {
-  @include text-style-10;
   position: fixed;
   display: block;
   width: 35px;
   height: 35px;
   font-family: $font-en-normal;
+  font-size: $font-size-10;
   text-align: center;
   background-color: $yellow;
   border-radius: 50%;
   opacity: 0;
   visibility: visible;
   transition: opacity 0.5s, visibility 0.5s;
-}
-
-.showButton {
-  opacity: 1 !important;
-  visibility: visible !important;
 }
 
 .btn-prev,
@@ -53,7 +48,7 @@
   height: 50px;
 
   @include responsive(T) {
-    top: -25px;
+    top: -15px;
     width: 660px;
     height: 55px;
   }
@@ -93,25 +88,25 @@
   font-size: $font-size-13;
   font-weight: 700;
   line-height: $line-height-10;
+  color: $primary;
   text-align: center;
   vertical-align: middle;
   background-color: $white;
   border: 1px solid $border;
-  color: $primary;
 
   @include responsive(T) {
     height: 45px;
     padding: 12px 33px;
-    margin-top: 50px;
-    margin-bottom: 55px;
+    margin-top: 45px;
+    margin-bottom: 50px;
     font-size: $font-size-16;
   }
 
   @include responsive(D) {
     height: 45px;
     padding: 12px 33px;
-    margin-top: 50px;
-    margin-bottom: 55px;
+    margin-top: 45px;
+    margin-bottom: 50px;
     font-size: $font-size-16;
   }
 

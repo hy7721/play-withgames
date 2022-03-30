@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local('Noto Sans KR');
-  src: url('/assets/fonts/NotoSansKR-Thin.otf') format('opentype'),
-    url('/assets/fonts/NotoSansKR-Thin.ttf') format('truetype'),
-    url('/assets/fonts/NotoSansKR-Thin.woff2') format('woff2');
+  src: url('./assets/fonts/NotoSansKR-Thin.otf') format('opentype'),
+    url('./assets/fonts/NotoSansKR-Thin.ttf') format('truetype'),
+    url('./assets/fonts/NotoSansKR-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: block;
@@ -12,9 +12,9 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local('Noto Sans KR');
-  src: url('/assets/fonts/NotoSansKR-Light.otf') format('opentype'),
-    url('/assets/fonts/NotoSansKR-Light.ttf') format('truetype'),
-    url('/assets/fonts/NotoSansKR-Light.woff2') format('woff2');
+  src: url('./assets/fonts/NotoSansKR-Light.otf') format('opentype'),
+    url('./assets/fonts/NotoSansKR-Light.ttf') format('truetype'),
+    url('./assets/fonts/NotoSansKR-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: block;
@@ -23,9 +23,9 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local('Noto Sans KR');
-  src: url('/assets/fonts/NotoSansKR-Regular.otf') format('opentype'),
-    url('/assets/fonts/NotoSansKR-Regular.ttf') format('truetype'),
-    url('/assets/fonts/NotoSansKR-Regular.woff2') format('woff2');
+  src: url('./assets/fonts/NotoSansKR-Regular.otf') format('opentype'),
+    url('./assets/fonts/NotoSansKR-Regular.ttf') format('truetype'),
+    url('./assets/fonts/NotoSansKR-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: block;
@@ -34,9 +34,9 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local('Noto Sans KR');
-  src: url('/assets/fonts/NotoSansKR-Medium.otf') format('opentype'),
-    url('/assets/fonts/NotoSansKR-Medium.ttf') format('truetype'),
-    url('/assets/fonts/NotoSansKR-Medium.woff2') format('woff2');
+  src: url('./assets/fonts/NotoSansKR-Medium.otf') format('opentype'),
+    url('./assets/fonts/NotoSansKR-Medium.ttf') format('truetype'),
+    url('./assets/fonts/NotoSansKR-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: block;
@@ -45,9 +45,9 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local('Noto Sans KR');
-  src: url('/assets/fonts/NotoSansKR-Bold.otf') format('opentype'),
-    url('/assets/fonts/NotoSansKR-Bold.ttf') format('truetype'),
-    url('/assets/fonts/NotoSansKR-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/NotoSansKR-Bold.otf') format('opentype'),
+    url('./assets/fonts/NotoSansKR-Bold.ttf') format('truetype'),
+    url('./assets/fonts/NotoSansKR-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: block;
@@ -56,9 +56,9 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local('Noto Sans KR');
-  src: url('/assets/fonts/NotoSansKR-Black.otf') format('opentype'),
-    url('/assets/fonts/NotoSansKR-Black.ttf') format('truetype'),
-    url('/assets/fonts/NotoSansKR-Black.woff2') format('woff2');
+  src: url('./assets/fonts/NotoSansKR-Black.otf') format('opentype'),
+    url('./assets/fonts/NotoSansKR-Black.ttf') format('truetype'),
+    url('./assets/fonts/NotoSansKR-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: block;

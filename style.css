@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local("Noto Sans KR");
-  src: url("/assets/fonts/NotoSansKR-Thin.otf") format("opentype"), url("/assets/fonts/NotoSansKR-Thin.ttf") format("truetype"), url("/assets/fonts/NotoSansKR-Thin.woff2") format("woff2");
+  src: url("./assets/fonts/NotoSansKR-Thin.otf") format("opentype"), url("./assets/fonts/NotoSansKR-Thin.ttf") format("truetype"), url("./assets/fonts/NotoSansKR-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
   font-display: block; }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local("Noto Sans KR");
-  src: url("/assets/fonts/NotoSansKR-Light.otf") format("opentype"), url("/assets/fonts/NotoSansKR-Light.ttf") format("truetype"), url("/assets/fonts/NotoSansKR-Light.woff2") format("woff2");
+  src: url("./assets/fonts/NotoSansKR-Light.otf") format("opentype"), url("./assets/fonts/NotoSansKR-Light.ttf") format("truetype"), url("./assets/fonts/NotoSansKR-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: block; }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local("Noto Sans KR");
-  src: url("/assets/fonts/NotoSansKR-Regular.otf") format("opentype"), url("/assets/fonts/NotoSansKR-Regular.ttf") format("truetype"), url("/assets/fonts/NotoSansKR-Regular.woff2") format("woff2");
+  src: url("./assets/fonts/NotoSansKR-Regular.otf") format("opentype"), url("./assets/fonts/NotoSansKR-Regular.ttf") format("truetype"), url("./assets/fonts/NotoSansKR-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: block; }
@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local("Noto Sans KR");
-  src: url("/assets/fonts/NotoSansKR-Medium.otf") format("opentype"), url("/assets/fonts/NotoSansKR-Medium.ttf") format("truetype"), url("/assets/fonts/NotoSansKR-Medium.woff2") format("woff2");
+  src: url("./assets/fonts/NotoSansKR-Medium.otf") format("opentype"), url("./assets/fonts/NotoSansKR-Medium.ttf") format("truetype"), url("./assets/fonts/NotoSansKR-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: block; }
@@ -33,7 +33,7 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local("Noto Sans KR");
-  src: url("/assets/fonts/NotoSansKR-Bold.otf") format("opentype"), url("/assets/fonts/NotoSansKR-Bold.ttf") format("truetype"), url("/assets/fonts/NotoSansKR-Bold.woff2") format("woff2");
+  src: url("./assets/fonts/NotoSansKR-Bold.otf") format("opentype"), url("./assets/fonts/NotoSansKR-Bold.ttf") format("truetype"), url("./assets/fonts/NotoSansKR-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: block; }
@@ -41,7 +41,7 @@
 @font-face {
   font-family: 'Noto Sans KR';
   src: local("Noto Sans KR");
-  src: url("/assets/fonts/NotoSansKR-Black.otf") format("opentype"), url("/assets/fonts/NotoSansKR-Black.ttf") format("truetype"), url("/assets/fonts/NotoSansKR-Black.woff2") format("woff2");
+  src: url("./assets/fonts/NotoSansKR-Black.otf") format("opentype"), url("./assets/fonts/NotoSansKR-Black.ttf") format("truetype"), url("./assets/fonts/NotoSansKR-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: block; }
@@ -71,6 +71,10 @@
 
 @media screen and (min-width: 1280px) {
   .lg-hidden {
+    display: none !important; } }
+
+@media (orientation: landscape) {
+  .landscape-hidden {
     display: none !important; } }
 
 html {
@@ -154,7 +158,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button; }
+  -webkit-appearacne: button; }
 
 button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
@@ -197,6 +201,7 @@ textarea {
 
 [type='search'] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px; }
 
 [type='search']::-webkit-search-decoration {
@@ -204,6 +209,7 @@ textarea {
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
+  appearance: button;
   font: inherit; }
 
 details {
@@ -301,6 +307,10 @@ br {
   font-family: "Arial Narrow", Helvetica, sans-serif;
   color: #171a21; }
 
+.showButton {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
 #playwithGames {
   position: relative;
   width: 100%;
@@ -310,8 +320,10 @@ br {
 .play-main {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
+
+.play-footer {
+  position: relative; }
 
 .wrap-footer {
   display: flex;
@@ -423,7 +435,7 @@ br {
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .play-header {
       height: 90px;
-      padding: 30px 0 0 50px; } }
+      padding: 30px 0 0 20px; } }
   @media screen and (min-width: 1280px) {
     .play-header {
       position: absolute;
@@ -456,9 +468,21 @@ h1,
       margin: 0;
       vertical-align: middle; } }
 
+@media screen and (min-width: 1280px) {
+  .bg-notice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: repeat; } }
+
 .wrap-notice {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   position: relative;
@@ -478,7 +502,7 @@ h1,
       padding: 0 20px; } }
 
 .tit-notice {
-  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-family: "Arial Bold", Helvetica, sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: #000;
@@ -488,21 +512,22 @@ h1,
   text-align: center; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .tit-notice {
-      font-family: "Arial Narrow", Helvetica, sans-serif;
+      font-family: "Arial Bold", Helvetica, sans-serif;
       font-weight: 700;
       font-size: 30px;
       color: #000;
       margin-top: 92px; } }
   @media screen and (min-width: 1280px) {
     .tit-notice {
-      font-family: "Arial Narrow", Helvetica, sans-serif;
+      font-family: "Arial Bold", Helvetica, sans-serif;
       font-weight: 700;
       font-size: 55px;
       line-height: 1em;
       color: #000;
-      margin-top: 194px; } }
+      margin-top: 140px; } }
 
 .list-notice {
+  position: relative;
   width: 100%;
   margin-top: 28px;
   text-overflow: ellipsis;
@@ -512,11 +537,17 @@ h1,
       margin-top: 45px; } }
   @media screen and (min-width: 1280px) {
     .list-notice {
-      margin-top: 89px;
+      margin-top: 65px;
       border-top: 2px solid #000; } }
+  .list-notice .notice-title {
+    display: block;
+    height: 100%; }
+    @media screen and (min-width: 1280px) {
+      .list-notice .notice-title {
+        height: 30px; } }
   .list-notice li {
     position: relative;
-    padding: 14px 0 17px 14px;
+    padding: 14px 14px 17px 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -526,11 +557,11 @@ h1,
         padding: 16px 24px; } }
     @media screen and (min-width: 1280px) {
       .list-notice li {
-        height: 65px;
-        padding: 25px 40px 20px 33px; } }
+        padding: 20px 40px 12px 33px;
+        line-height: 1.4em; } }
     .list-notice li .date {
-      font-size: 12px;
-      font-family: "Arial Narrow", Helvetica, sans-serif; }
+      font-family: "Arial Narrow", Helvetica, sans-serif;
+      font-size: 12px; }
       @media screen and (min-width: 768px) and (max-width: 1279px) {
         .list-notice li .date {
           font-size: 14px;
@@ -544,11 +575,101 @@ h1,
     .list-notice li .title {
       font-size: 13px;
       font-weight: 400;
-      color: #494949; }
+      color: #494949;
+      display: block;
+      padding-right: 25px;
+      overflow: hidden;
+      line-height: 1.5em;
+      text-overflow: ellipsis; }
+      @media screen and (min-width: 768px) and (max-width: 1279px) {
+        .list-notice li .title {
+          position: relative;
+          display: inline-block;
+          max-width: 550px;
+          padding-right: 25px;
+          padding-bottom: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis; } }
       @media screen and (min-width: 1280px) {
         .list-notice li .title {
+          position: relative;
           float: left;
+          max-width: 1060px;
+          padding-right: 25px;
+          padding-bottom: 10px;
           font-size: 16px; } }
+    .list-notice li .notice-detail {
+      position: relative;
+      display: none;
+      width: 100%;
+      padding: 38px 0 64px;
+      margin-top: 15px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.8em;
+      color: #171a21;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: normal;
+      border-top: 1px solid #ddd; }
+      @media screen and (min-width: 1280px) {
+        .list-notice li .notice-detail {
+          max-height: 100%;
+          padding: 64px 0 106px;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 1.8em; } }
+      .list-notice li .notice-detail text,
+      .list-notice li .notice-detail p,
+      .list-notice li .notice-detail div,
+      .list-notice li .notice-detail span {
+        display: block;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.8em;
+        color: #171a21;
+        word-wrap: break-word;
+        white-space: normal; }
+        @media screen and (min-width: 1280px) {
+          .list-notice li .notice-detail text,
+          .list-notice li .notice-detail p,
+          .list-notice li .notice-detail div,
+          .list-notice li .notice-detail span {
+            margin-top: 40px;
+            font-size: 16px; } }
+      .list-notice li .notice-detail .subtitle {
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.1em;
+        letter-spacing: -0.3px;
+        word-wrap: break-word;
+        white-space: normal; }
+        @media screen and (min-width: 1280px) {
+          .list-notice li .notice-detail .subtitle {
+            font-size: 18px; } }
+        .list-notice li .notice-detail .subtitle + .subtitle {
+          margin-top: 25px; }
+      .list-notice li .notice-detail .paragraph {
+        display: block;
+        margin-top: 40px;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.8em;
+        word-wrap: break-word;
+        white-space: normal; }
+        .list-notice li .notice-detail .paragraph + .paragraph {
+          margin-top: 18px; }
+          @media screen and (min-width: 1280px) {
+            .list-notice li .notice-detail .paragraph + .paragraph {
+              margin-top: 23px; } }
+        @media screen and (min-width: 1280px) {
+          .list-notice li .notice-detail .paragraph {
+            margin-top: 40px;
+            font-size: 16px; } }
 
 .play-popup {
   position: fixed;
@@ -557,27 +678,33 @@ h1,
   z-index: 9999;
   display: none;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+  .play-popup ::-webkit-scrollbar {
+    display: none; }
 
 .wrap-popup {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 30px);
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 7721;
   width: 80vw;
-  max-height: 80vh;
+  max-height: calc(100% - 50px);
   margin-top: 50px;
   background-color: #fff;
-  border: 2px solid #fff; }
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%); }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .wrap-popup {
+      top: calc(50% - 30px);
       width: 660px;
-      max-height: 566px; } }
+      max-height: 570px; } }
   @media screen and (min-width: 1280px) {
     .wrap-popup {
+      top: calc(50% - 55px);
       width: 660px;
-      max-height: 566px; } }
+      max-height: 570px; } }
 
 .wrap-dimmed {
   position: fixed;
@@ -591,53 +718,87 @@ h1,
   opacity: 0.8; }
 
 .wrap-txt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
+  position: relative;
+  display: block;
+  overflow-y: scroll;
+  text-align: center; }
+  @media screen and (orientation: portrait) {
+    .wrap-txt {
+      max-height: 80vh; } }
+  @media screen and (max-height: 640px) and (orientation: landscape) {
+    .wrap-txt {
+      max-height: 300px; } }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    .wrap-txt {
+      height: 500px;
+      font-size: 13px; } }
+  @media screen and (min-width: 1280px) {
+    .wrap-txt {
+      height: 500px; } }
 
 .tit-popup {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 45px;
+  min-height: 45px;
+  padding: 20px 10px;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 1.5em;
   color: #101010;
+  text-align: center;
   border-bottom: 1px solid #ddd; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .tit-popup {
-      font-size: 22px;
-      height: 95px; } }
+      min-height: 90px;
+      font-size: 18px; } }
   @media screen and (min-width: 1280px) {
     .tit-popup {
-      font-size: 22px;
-      height: 95px; } }
+      min-height: 90px;
+      padding: 30px 20px;
+      font-size: 22px; } }
 
 .txt-popup {
   position: relative;
   display: inline-block;
   width: 100%;
   padding: 30px 30px 25px 30px;
-  font-size: 13px;
+  overflow-x: hidden;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 1.4em;
   color: #494949;
-  text-align: center;
-  word-break: break-all; }
+  word-wrap: break-word;
+  white-space: normal; }
+  .txt-popup p,
+  .txt-popup span,
+  .txt-popup div {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4em;
+    color: #494949; }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      .txt-popup p,
+      .txt-popup span,
+      .txt-popup div {
+        font-size: 14px; } }
+    @media screen and (min-width: 1280px) {
+      .txt-popup p,
+      .txt-popup span,
+      .txt-popup div {
+        font-size: 16px; } }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .txt-popup {
-      padding: 60px 60px 50px 60px;
-      font-size: 16px; } }
+      font-size: 14px; } }
   @media screen and (min-width: 1280px) {
     .txt-popup {
       padding: 60px 60px 50px 60px;
       font-size: 16px; } }
 
 .wrap-visual {
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
   .wrap-visual .bg-visual {
     position: absolute;
     top: 0;
@@ -645,7 +806,8 @@ h1,
     width: 100%;
     height: 100vh;
     max-height: 650px;
-    background: url("/assets/images/img-visual.jpg");
+    background-attachment: fixed;
+    background-image: url("./assets/images/img-visual.jpg");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -688,15 +850,21 @@ h1,
   padding: 0 20px;
   overflow: hidden;
   text-align: left; }
-  @media screen and (max-height: 570px) {
+  @media screen and (orientation: landscape) and (max-height: 460px) {
+    .wrap-tit-main {
+      max-width: 530px;
+      max-height: 240px;
+      padding-bottom: 10px; } }
+  @media screen and (orientation: portrait) and (max-height: 570px) {
     .wrap-tit-main {
       bottom: 20px; } }
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    .wrap-tit-main {
-      max-width: 500px;
-      max-height: 280px;
-      padding-bottom: 52px;
-      padding-left: 54px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
+  .wrap-tit-main {
+    max-width: 500px;
+    max-height: 280px;
+    padding-bottom: 52px;
+    padding-left: 54px; } }
   @media screen and (min-width: 1280px) {
     .wrap-tit-main {
       max-width: 2560px;
@@ -731,21 +899,23 @@ h1,
         -webkit-animation: ani-main-tit 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
         animation: ani-main-tit 1s cubic-bezier(0.215, 0.61, 0.355, 1) both; } }
   .tit-main.is-bold {
+    font-family: "Arial Bold", Helvetica, sans-serif;
     font-weight: 700;
     color: #fffd46; }
 
 .txt-main {
-  font-size: 11px;
   display: block;
   width: 100%;
   margin-top: 6px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.5em;
+  letter-spacing: -0.2px;
   color: #fff; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .txt-main {
-      font-size: 12px;
       margin-top: 16px;
+      font-size: 12px;
       line-height: 1.4em; } }
   @media screen and (min-width: 1280px) {
     .txt-main {
@@ -758,11 +928,15 @@ h1,
   position: relative;
   width: 30px;
   height: 75px;
-  margin-top: 25px; }
+  margin-top: 25px;
+  margin-left: 4px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .wrap-scroll {
       height: 88px;
       margin-top: 15px; } }
+  @media screen and (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
+    .wrap-scroll {
+      margin-left: -8px; } }
   @media screen and (min-width: 1280px) {
     .wrap-scroll {
       width: 65px;
@@ -775,11 +949,14 @@ h1,
   left: 0;
   width: 100%;
   height: 100%; }
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    .btn-scroll {
-      top: 8px;
-      left: -8px;
-      padding: 0 20px 20px 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
+  .btn-scroll {
+    top: 8px;
+    left: -8px;
+    padding: 0 20px 20px 0;
+    -webkit-animation: ani-scroll 1.5s infinite both;
+    animation: ani-scroll 1.5s infinite both; } }
   @media screen and (min-width: 1280px) {
     .btn-scroll {
       padding-right: 52px;
@@ -788,49 +965,28 @@ h1,
       animation: ani-scroll 1.5s infinite both; } }
 
 .txt-scroll {
-  font-size: 10px;
   position: absolute;
   top: 3px;
   left: -7px;
+  font-size: 10px;
   color: #fff;
   transform: rotate(270deg); }
+  @media screen and (max-height: 601px) {
+    .txt-scroll {
+      top: -8px; } }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .txt-scroll {
-      font-size: 12px;
       top: -14px;
       left: -20px;
-      width: 65px; } }
+      width: 65px;
+      font-size: 12px; } }
   @media screen and (min-width: 1280px) {
     .txt-scroll {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
       top: 2px;
       left: -24px;
       width: 65px; } }
-
-@-webkit-keyframes ani-main-bg {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 16%;
-    transform-origin: 50% 16%; }
-  100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top; } }
-
-@keyframes ani-main-bg {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 16%;
-    transform-origin: 50% 16%; }
-  100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top; } }
 
 @-webkit-keyframes ani-main-tit {
   0% {
@@ -862,7 +1018,7 @@ h1,
   0% {
     transform: translateY(-5px); }
   50% {
-    transform: translateY(15px); }
+    transform: translateY(10px); }
   100% {
     transform: translateY(-5px); } }
 
@@ -870,7 +1026,7 @@ h1,
   0% {
     transform: translateY(-5px); }
   50% {
-    transform: translateY(15px); }
+    transform: translateY(10px); }
   100% {
     transform: translateY(-5px); } }
 
@@ -880,10 +1036,10 @@ h1,
   text-align: center; }
 
 .btn-more {
-  font-size: 12px;
   max-width: 230px;
   padding: 6px 10px;
   margin-top: 20px;
+  font-size: 12px;
   color: #7f7f7f;
   border: 1px solid #ddd; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -891,22 +1047,18 @@ h1,
       margin-top: 44px; } }
 
 .btn-top {
-  font-size: 10px;
   position: fixed;
   display: block;
   width: 35px;
   height: 35px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
   text-align: center;
   background-color: #fffd46;
   border-radius: 50%;
   opacity: 0;
   visibility: visible;
   transition: opacity 0.5s, visibility 0.5s; }
-
-.showButton {
-  opacity: 1 !important;
-  visibility: visible !important; }
 
 .btn-prev,
 .btn-next {
@@ -926,7 +1078,7 @@ h1,
   height: 50px; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .wrap-close {
-      top: -25px;
+      top: -15px;
       width: 660px;
       height: 55px; } }
   @media screen and (min-width: 1280px) {
@@ -960,24 +1112,24 @@ h1,
   font-size: 13px;
   font-weight: 700;
   line-height: 1em;
+  color: #494949;
   text-align: center;
   vertical-align: middle;
   background-color: #fff;
-  border: 1px solid #ddd;
-  color: #494949; }
+  border: 1px solid #ddd; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .btn-landing {
       height: 45px;
       padding: 12px 33px;
-      margin-top: 50px;
-      margin-bottom: 55px;
+      margin-top: 45px;
+      margin-bottom: 50px;
       font-size: 16px; } }
   @media screen and (min-width: 1280px) {
     .btn-landing {
       height: 45px;
       padding: 12px 33px;
-      margin-top: 50px;
-      margin-bottom: 55px;
+      margin-top: 45px;
+      margin-bottom: 50px;
       font-size: 16px; } }
   .btn-landing:hover {
     color: #0068b3;
@@ -997,28 +1149,31 @@ h1,
   height: 25px;
   margin-top: 28px;
   margin-left: 4px;
-  background: url("/assets/images/mo/ico-scroll.png") center center no-repeat; }
+  background: url("./assets/images/mo/ico-scroll.png") center center no-repeat; }
+  @media screen and (max-height: 601px) {
+    .ico-scroll {
+      margin-top: 18px; } }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .ico-scroll {
       width: 5px;
       height: 31px;
       margin-top: 32px;
       margin-left: 11px;
-      background: url("/assets/images/tb/ico-scroll.png") center center no-repeat; } }
+      background: url("./assets/images/tb/ico-scroll.png") center center no-repeat; } }
   @media screen and (min-width: 1280px) {
     .ico-scroll {
       width: 7px;
       height: 43px;
-      margin-top: 60px;
+      margin-top: 65px;
       margin-left: 6px;
-      background: url("/assets/images/ico-scroll.png") center center no-repeat; } }
+      background: url("./assets/images/ico-scroll.png") center center no-repeat; } }
 
 .ico-plus {
   width: 13px;
   height: 13px;
   margin-top: 1px;
   margin-left: 46px;
-  background: url("/assets/images/ico-plus.png") center center no-repeat; }
+  background: url("./assets/images/ico-plus.png") center center no-repeat; }
 
 .ico-arr-t {
   position: absolute;
@@ -1027,34 +1182,46 @@ h1,
   top: 8px;
   width: 10px;
   height: 6px;
-  background: url("/assets/images/ico-top.png") center center no-repeat; }
+  background: url("./assets/images/ico-top.png") center center no-repeat; }
 
 .ico-prev {
   width: 10px;
   height: 19px;
-  background: url("/assets/images/ico-prev.png") center center no-repeat; }
+  background: url("./assets/images/ico-prev.png") center center no-repeat; }
 
 .ico-next {
   width: 10px;
   height: 19px;
-  background: url("/assets/images/ico-next.png") center center no-repeat; }
+  background: url("./assets/images/ico-next.png") center center no-repeat; }
 
 .ico-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  right: 0;
   width: 20px;
   height: 20px;
-  padding-top: 2px;
-  padding-left: 4px;
-  margin-top: -2px;
   margin-left: 10px;
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+  font-size: 15px;
   color: #fff;
   background-color: #4cb1f7; }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    .ico-new {
+      width: 18px;
+      height: 18px;
+      margin-top: -18px;
+      font-size: 14px; } }
+  @media screen and (min-width: 1280px) {
+    .ico-new {
+      margin-top: -20px; } }
 
 .ico-close {
   display: block;
   width: 20px;
   height: 20px;
-  background: url("/assets/images/ico-close.png") center center no-repeat; }
+  background: url("./assets/images/ico-close.png") center center no-repeat; }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .ico-close {
       width: 30px;

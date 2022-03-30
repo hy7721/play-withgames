@@ -1,6 +1,5 @@
 .wrap-visual {
   height: 100%;
-  overflow: hidden;
 
   .bg-visual {
     position: absolute;
@@ -9,7 +8,8 @@
     width: 100%;
     height: 100vh;
     max-height: 650px;
-    background: url('/assets/images/img-visual.jpg');
+    background-attachment: fixed;
+    background-image: url('./assets/images/img-visual.jpg');
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,9 +22,6 @@
     @include responsive(D) {
       max-height: 1520px;
       background-position: center top;
-      // -webkit-animation: ani-main-bg 10s ease-in-out infinite alternate-reverse
-      //   both;
-      // animation: ani-main-bg 10s ease-in-out infinite alternate-reverse both;
     }
   }
 
@@ -64,15 +61,23 @@
   overflow: hidden;
   text-align: left;
 
-  @media screen and (max-height: 570px) {
+  @media screen and (orientation: landscape) and (max-height: 460px) {
+    max-width: 530px;
+    max-height: 240px;
+    padding-bottom: 10px;
+  }
+
+  @media screen and (orientation: portrait) and (max-height: 570px) {
     bottom: 20px;
   }
 
   @include responsive(T) {
-    max-width: 500px;
-    max-height: 280px;
-    padding-bottom: 52px;
-    padding-left: 54px;
+    @media screen and (orientation: portrait) {
+      max-width: 500px;
+      max-height: 280px;
+      padding-bottom: 52px;
+      padding-left: 54px;
+    }
   }
 
   @include responsive(D) {
@@ -109,24 +114,25 @@
   }
 
   &.is-bold {
+    font-family: $font-en-bold;
     font-weight: 700;
-
     color: $yellow;
   }
 }
 
 .txt-main {
-  @include text-style-11;
   display: block;
   width: 100%;
   margin-top: 6px;
+  font-size: $font-size-11;
   font-weight: 400;
   line-height: $line-height-15;
+  letter-spacing: $letter-spacing-2;
   color: $white;
 
   @include responsive(T) {
-    @include text-style-12;
     margin-top: 16px;
+    font-size: $font-size-12;
     line-height: $line-height-14;
   }
 
@@ -142,10 +148,15 @@
   width: 30px;
   height: 75px;
   margin-top: 25px;
+  margin-left: 4px;
 
   @include responsive(T) {
     height: 88px;
     margin-top: 15px;
+
+    @include responsive(O) {
+      margin-left: -8px;
+    }
   }
 
   @include responsive(D) {
@@ -163,9 +174,13 @@
   height: 100%;
 
   @include responsive(T) {
-    top: 8px;
-    left: -8px;
-    padding: 0 20px 20px 0;
+    @media screen and (orientation: portrait) {
+      top: 8px;
+      left: -8px;
+      padding: 0 20px 20px 0;
+      -webkit-animation: ani-scroll 1.5s infinite both;
+      animation: ani-scroll 1.5s infinite both;
+    }
   }
 
   @include responsive(D) {
@@ -177,22 +192,26 @@
 }
 
 .txt-scroll {
-  @include text-style-10;
   position: absolute;
   top: 3px;
   left: -7px;
+  font-size: $font-size-10;
   color: $white;
   transform: rotate(270deg);
 
+  @media screen and (max-height: 601px) {
+    top: -8px;
+  }
+
   @include responsive(T) {
-    @include text-style-12;
     top: -14px;
     left: -20px;
     width: 65px;
+    font-size: $font-size-12;
   }
 
   @include responsive(D) {
-    @include text-style-16;
+    @include text-style-15;
     top: 2px;
     left: -24px;
     width: 65px;
@@ -200,38 +219,6 @@
 }
 
 // visual animation
-
-@-webkit-keyframes ani-main-bg {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 16%;
-    transform-origin: 50% 16%;
-  }
-
-  100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top;
-  }
-}
-
-@keyframes ani-main-bg {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 16%;
-    transform-origin: 50% 16%;
-  }
-
-  100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top;
-  }
-}
 
 @-webkit-keyframes ani-main-tit {
   0% {
@@ -277,7 +264,7 @@
   }
 
   50% {
-    transform: translateY(15px);
+    transform: translateY(10px);
   }
 
   100% {
@@ -291,7 +278,7 @@
   }
 
   50% {
-    transform: translateY(15px);
+    transform: translateY(10px);
   }
 
   100% {

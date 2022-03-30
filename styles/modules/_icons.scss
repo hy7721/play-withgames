@@ -12,22 +12,26 @@
   height: 25px;
   margin-top: 28px;
   margin-left: 4px;
-  background: url('/assets/images/mo/ico-scroll.png') center center no-repeat;
+  background: url('./assets/images/mo/ico-scroll.png') center center no-repeat;
+
+  @media screen and (max-height: 601px) {
+    margin-top: 18px;
+  }
 
   @include responsive(T) {
     width: 5px;
     height: 31px;
     margin-top: 32px;
     margin-left: 11px;
-    background: url('/assets/images/tb/ico-scroll.png') center center no-repeat;
+    background: url('./assets/images/tb/ico-scroll.png') center center no-repeat;
   }
 
   @include responsive(D) {
     width: 7px;
     height: 43px;
-    margin-top: 60px;
+    margin-top: 65px;
     margin-left: 6px;
-    background: url('/assets/images/ico-scroll.png') center center no-repeat;
+    background: url('./assets/images/ico-scroll.png') center center no-repeat;
   }
 }
 
@@ -36,7 +40,7 @@
   height: 13px;
   margin-top: 1px;
   margin-left: 46px;
-  background: url('/assets/images/ico-plus.png') center center no-repeat;
+  background: url('./assets/images/ico-plus.png') center center no-repeat;
 }
 
 .ico-arr-t {
@@ -44,38 +48,50 @@
   top: 8px;
   width: 10px;
   height: 6px;
-  background: url('/assets/images/ico-top.png') center center no-repeat;
+  background: url('./assets/images/ico-top.png') center center no-repeat;
 }
 
 .ico-prev {
   width: 10px;
   height: 19px;
-  background: url('/assets/images/ico-prev.png') center center no-repeat;
+  background: url('./assets/images/ico-prev.png') center center no-repeat;
 }
 
 .ico-next {
   width: 10px;
   height: 19px;
-  background: url('/assets/images/ico-next.png') center center no-repeat;
+  background: url('./assets/images/ico-next.png') center center no-repeat;
 }
 
 .ico-new {
+  @include flexbox;
   position: absolute;
+  right: 0;
   width: 20px;
   height: 20px;
-  padding-top: 2px;
-  padding-left: 4px;
-  margin-top: -2px;
   margin-left: 10px;
+  font-family: $font-en-narrow;
+  font-size: $font-size-15;
   color: $white;
   background-color: $light-blue;
+
+  @include responsive(T) {
+    width: 18px;
+    height: 18px;
+    margin-top: -18px;
+    font-size: $font-size-14;
+  }
+
+  @include responsive(D) {
+    margin-top: -20px;
+  }
 }
 
 .ico-close {
   display: block;
   width: 20px;
   height: 20px;
-  background: url('/assets/images/ico-close.png') center center no-repeat;
+  background: url('./assets/images/ico-close.png') center center no-repeat;
 
   @include responsive(T) {
     width: 30px;

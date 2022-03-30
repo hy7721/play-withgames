@@ -36,7 +36,6 @@ $lg-max-container: 100%;
   .row {
     display: flex;
     flex-wrap: nowrap;
-    // flex-wrap: wrap;
   }
 
   [class^='col-'] {
@@ -57,7 +56,6 @@ $lg-max-container: 100%;
 
   @for $i from 1 through $md-columns {
     .col-md-#{$i} {
-      // width: percentage($i / $md-columns);
       width: ($md-max-container / $md-columns) * $i;
     }
   }

@@ -1,3 +1,8 @@
+@mixin font-en-narrow() {
+  font-family: $font-en-narrow;
+  font-weight: 500;
+}
+
 @mixin text-style-72() {
   font-family: $font-en-narrow;
   font-size: $font-size-72;
@@ -6,7 +11,7 @@
 }
 
 @mixin text-style-55() {
-  font-family: $font-en-narrow;
+  font-family: $font-en-bold;
   font-weight: 700;
   font-size: $font-size-55;
   line-height: $line-height-10;
@@ -20,7 +25,7 @@
 }
 
 @mixin text-style-40() {
-  font-family: $font-en-narrow;
+  font-family: $font-en-bold;
   font-weight: 700;
   font-size: $font-size-40;
   color: $black;
@@ -33,7 +38,7 @@
 }
 
 @mixin text-style-30() {
-  font-family: $font-en-narrow;
+  font-family: $font-en-bold;
   font-weight: 700;
   font-size: $font-size-30;
   color: $black;
@@ -41,6 +46,11 @@
 
 @mixin text-style-16() {
   font-size: $font-size-16;
+  font-weight: 500;
+}
+
+@mixin text-style-15() {
+  font-size: $font-size-15;
   font-weight: 500;
 }
 
@@ -54,23 +64,6 @@
   font-size: $font-size-13;
   font-weight: 400;
   color: $primary;
-}
-
-@mixin text-style-12() {
-  font-size: $font-size-12;
-}
-
-@mixin text-style-11() {
-  font-size: $font-size-11;
-}
-
-@mixin text-style-10() {
-  font-size: $font-size-10;
-}
-
-@mixin font-en-narrow() {
-  font-family: $font-en-narrow;
-  font-weight: 500;
 }
 
 @mixin text-copyright {
